@@ -8,10 +8,11 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+- uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
-        with: {python-version: '3.10'}
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' # Gunakan versi Python yang lebih baru sekalian
       - name: Install deps
         run: pip install feedparser google-generativeai requests
       - name: Run script
