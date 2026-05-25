@@ -12,7 +12,7 @@ def save_processed_ids(ids):
     with open('data/processed.json', 'w') as f: json.dump(ids, f)
 
 def analyze_with_gemini(news_data):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-3.1-flash-lite')
     prompt = f"""Analisis berita berikut: {news_data}. 
     Berikan laporan ringkas: 1. Inti berita, 2. Dampak ke The Fed (Hawkish/Dovish), 3. Dampak ke BTC. 
     Gunakan format Markdown yang rapi."""
