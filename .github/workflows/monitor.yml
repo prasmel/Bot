@@ -8,7 +8,11 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # PENTING: Harus ada izin write agar bisa git push
+      contents: write
+    # TAMBAHKAN BARIS INI UNTUK MENGHILANGKAN WARNING
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
